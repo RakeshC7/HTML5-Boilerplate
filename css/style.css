@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/*** Fonts Face CSS ***/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/**** CSS Variables ****/
+
+/** use variables in css property like, background-color: var(--primary-color); */
+:root {
+    /* --- color variables --- */
+    --primary-color: #f9f9f9;
+    --secondary-color: #fff;
+    --border-color: #e8dede;
+    --text-primary-color: #292323;
+    --text-secondary-color: #ccc;
+    --text-selection-color: #b3d4fc;
+}
+
+/* -=- Common Element CSS Start -=- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-color);
+}
+
+img {
+    border: 0px !important;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.btn.focus,
+.form-control:hover,
+.form-control:focus,
+.form-control:focus:Active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--text-primary-color);
+    font-weight: normal;
+}
+
+hr {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--text-secondary-color);
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--text-secondary-color);
+}
+
+textarea::placeholder {
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+textarea::-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*** Heading CSS ***/
+h1,
+.h1 {}
+
+h2,
+.h2 {}
+
+h3,
+.h3 {}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {}
+
+/* Common Class CSS related to text alignment*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* -=- Header CSS -=- */
+header {}
+
+/* -=- Footer CSS -=- */
+footer {}
+
+/* -=- Main Area CSS -=- */
+main {}
+
+/* -=- Keyframe CSS -=- */
+
+/****** Responsive CSS Start ******/
+
+@media only screen and (min-width: 1200px) {
+    /* Add style according to viewports size */
+}
+
+/****** Responsive CSS End ******/
