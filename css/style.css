@@ -36,6 +36,13 @@
     text-shadow: none;
 }
 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 html,
 body {
     margin: 0px;
@@ -52,6 +59,7 @@ img {
     outline: none;
     width: 100%;
     max-width: 100%;
+    display: block;
 }
 
 ul,
@@ -64,6 +72,24 @@ ol {
 a {
     text-decoration: none;
     outline: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
 a:hover,
@@ -115,10 +141,6 @@ fieldset {
     padding: 0;
 }
 
-textarea {
-    resize: none;
-}
-
 input::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--text-secondary-color);
@@ -133,6 +155,21 @@ input:-ms-input-placeholder {
 input::-ms-input-placeholder {
     /* Microsoft Edge */
     color: var(--text-secondary-color);
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
 }
 
 textarea::placeholder {
@@ -207,6 +244,12 @@ footer {}
 main {}
 
 /* -=- Keyframe CSS -=- */
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
+@media (prefers-reduced-motion) {
+    
+}
 
 /****** Responsive CSS Start ******/
 
