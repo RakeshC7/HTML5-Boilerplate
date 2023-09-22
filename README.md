@@ -7,6 +7,13 @@
 
 <br />
 
+## ✨ Contributing
+
+Contributing is possible via GitHub. Alternatively, you can send in content, content-drafts or content-ideas
+via Mail: rcdesign28@gmail.com .
+
+<br />
+
 <div align="center">
   <small>Created and maintained by <a href="https://twitter.com/_Rakeshc7">Rakesh Chotaliya</a> with ❤️.</small>
 </div>
